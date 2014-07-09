@@ -1,0 +1,64 @@
+\usepackage[export]{adjustbox}
+\usepackage{booktabs}
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes,plotmarks,decorations.pathreplacing,automata}
+\input{../include/splitcircle}
+\input{../include/oset}
+
+\newcommand{\whitepic}[2]{
+  \begin{center}
+    \begin{tikzpicture}[scale=4, show background rectangle, background
+      rectangle/.style={fill=white}]
+      \node (label) at
+      (0,0)[draw=black]{\includegraphics[width=#2\linewidth]{#1}};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\rwhitepic}[2]{
+\hfill   \begin{tikzpicture}[scale=4, show background rectangle, background
+      rectangle/.style={fill=white}]
+      \node (label) at
+      (0,0)[draw=black]{\includegraphics[width=#2\linewidth]{#1}};
+    \end{tikzpicture}
+}
+
+% set handwritten font, necessary packages are loaded in beamerthemeblackboard.sty
+% \ECFAugie
+
+\tolerance=1000
+% \input{../include/mybeamer-black}
+\input{../include/br}
+\institute{Cambridge Institute for Medical Research\\University of Cambridge}
+\usepackage{tikz}\usetikzlibrary{arrows,positioning,shapes.geometric,calc,through,backgrounds}
+\titlegraphic{\includegraphics[height=.6\textheight]{dilstats}}
+\usetheme{default}
+\author{Chris Wallace}
+\date{\vspace{-1em}}
+\title{}
+\begin{document}
+
+\maketitle
+
+
+
+%% CONTENT HERE
+
+
+
+\begin{frame}{Thanks to}
+Lots of people
+\vfill
+\input{../logo/logo-white.tex}
+\logos
+\end{frame}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "slides"
+%%% End: 

@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2010 Jasper Bosch (p.j.bosch@student.rug.nl)  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Some parts of this theme are based on the 'diepentheme' %
+% by Guido Diepen <diepen@cs.uu.nl>                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ProvidesPackage{beamerthemeblackboard}
+
+\RequirePackage{beamerbasethemes}[2004/10/07]
+\RequirePackage{calc}
+\RequirePackage{ifthen}
+\usepackage[T1]{fontenc}
+\usepackage{emerald}
+\useoutertheme{blackboard}
+
+% remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+\mode<presentation>
+
+% set text colors for different objects
+\setbeamercolor{title}{fg=yellow!50}
+\setbeamercolor{frametitle}{fg=yellow!50}
+\setbeamercolor{structure}{fg=yellow!40!white}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{alerted text}{fg=white}
+\setbeamercolor{example text}{fg=white}
+
+% set fonts
+\newcommand{\myfont}{\ECFIntimacy}
+\setbeamerfont{my frametitle}{size=\Large, series=\myfont}
+\setbeamerfont{framesubtitle}{size=\large, series=\myfont}
+\setbeamerfont{structure}{series=\bfseries}
+\setbeamerfont{title}{size=\huge, series=\myfont}
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{date}{size=\large}
+\setbeamerfont{institute}{size=\large}
+\setbeamerfont{caption}{series=\myfont}
