@@ -10,6 +10,5 @@
 
 ## TODO
 - change background image
-- change the engine from pdflatex to XeLaTeX
 - support Korean
 - sample.pdf(slide)
