@@ -1,0 +1,26 @@
+\usetikzlibrary{shapes,shapes.multipart}
+\makeatletter
+\tikzset{circle split part fill/.style  args={#1,#2}{%
+ alias=tmp@name, % Jake's idea !!
+  postaction={%
+    insert path={
+     \pgfextra{% 
+     \pgfpointdiff{\pgfpointanchor{\pgf@node@name}{center}}%
+                  {\pgfpointanchor{\pgf@node@name}{east}}%            
+     \pgfmathsetmacro\insiderad{\pgf@x}
+      \fill[#1] (\pgf@node@name.base) ([xshift=-\pgflinewidth]\pgf@node@name.east) arc
+                          (0:180:\insiderad-\pgflinewidth)--cycle;
+      \fill[#2] (\pgf@node@name.base) ([xshift=\pgflinewidth]\pgf@node@name.west)  arc
+                           (180:360:\insiderad-\pgflinewidth)--cycle;            %  \end{scope}   
+         }}}}}  
+\makeatother  
+% %\tikzset{every node/.style={circle split, draw,  minimum width=0.6cm}}
+% \tikzstyle{both}=[circle split, draw, circle split part fill={black,black}]
+% \tikzstyle{neither}=[circle split, draw, circle split part fill={white,white}]
+% \tikzstyle{t1}=[circle split, draw, circle split part fill={black,white}]
+% \tikzstyle{t2}=[circle split, draw, circle split part fill={white,black}]
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

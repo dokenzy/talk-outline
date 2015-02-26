@@ -1,0 +1,14 @@
+\setbeamercolor{framesource}{fg=gray}
+\setbeamerfont{framesource}{size=\footnotesize}
+\makeatletter
+\renewcommand{\footnoterule}{}
+\define@key{beamerfootnote}{nonumber}[true]{\edef\beamer@footarg{0}\def\@makefnmark{}}% have to set a number in \beamer@footarg, then it won't be automatically generated one. setting \@makefnmark to be empty means the number isn't printed. but only use this in a group else it affects following footnotes!
+% instead of 'nonumber', could just use 0 as an optional argument to \footnote, but OP reports that keyval complains about this in some situations
+% http://tex.stackexchange.com/questions/89539
+\newcommand{\br}[1]{{\footnote[nonumber]{%
+    \begin{beamercolorbox}[right,wd=\dimexpr\hsize-1.8em\relax]{framesource}
+      \setlength\topsep{0pt}\rule{0.65\textwidth}{0.4mm}\vspace{0.5em}\\[-6pt]
+      \usebeamerfont{framesource}\usebeamercolor[fg]{framesource}\itshape{#1}
+    \end{beamercolorbox}}}}
+\setlength{\footnotesep}{0cm}%\footnotesep is the space between footnotes (generated with a \rule)
+\makeatother

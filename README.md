@@ -1,4 +1,15 @@
-basic outline of a beamer slides set.  
+# Beamer Theme: Blackboard
+- forked from [https://github.com/chr1swallace/talk-outline](https://github.com/chr1swallace/talk-outline)
+- aimed to create slides with XeLaTeX
 
-Content goes in content.tex, then 
-`make` will create slides for display, a black-on-white version, and a 4 slides per page black-on-white version for printing.
+## Usage
+- write your text in content.tex
+- run: `make [all|handout|4up|slides]`
+ - `make` will create slides for display, a black-on-white version, and a 4 slides per page black-on-white version for printing.
+ - For now, LaTeX engine is pdflatex.
+
+## TODO
+- change background image
+- change the engine from pdflatex to XeLaTeX
+- support Korean
+- sample.pdf(slide)
