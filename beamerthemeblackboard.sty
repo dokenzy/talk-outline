@@ -9,8 +9,8 @@
 \RequirePackage{beamerbasethemes}[2004/10/07]
 \RequirePackage{calc}
 \RequirePackage{ifthen}
-\usepackage[T1]{fontenc}
-\usepackage{emerald}
+%\usepackage[T1]{fontenc}
+%\usepackage{emerald}
 \useoutertheme{blackboard}
 
 % remove navigation symbols
@@ -27,7 +27,8 @@
 \setbeamercolor{example text}{fg=white}
 
 % set fonts
-\newcommand{\myfont}{\ECFIntimacy}
+\RequirePackage{fontspec}
+\newfontfamily{\myfont}{KoreanHNDB-R}[Ligatures=TeX]
 \setbeamerfont{my frametitle}{size=\Large, series=\myfont}
 \setbeamerfont{framesubtitle}{size=\large, series=\myfont}
 \setbeamerfont{structure}{series=\bfseries}

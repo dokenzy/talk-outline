@@ -8,5 +8,4 @@
  - `make` will create slides for display, a black-on-white version, and a 4 slides per page black-on-white version for printing.
 
 ## TODO
-- support Korean
 - sample.pdf(slide)
